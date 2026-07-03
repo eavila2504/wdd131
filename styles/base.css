@@ -6,29 +6,22 @@
 
     body {
       font-family: 'Work Sans', sans-serif;
-      background: #f6f4f0;  /* soft off-white */
+      background: #f6f4f0;
       color: #1e2b2f;
       line-height: 1.6;
       padding: 0 1.5rem;
     }
 
-    /* ----- layout containers ----- */
-    header, main, footer {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0.5rem 0;
-    }
-
+    /* ===== HEADER RULES ===== */
     header {
-      background: #1e2b2f;   /* deep charcoal */
-      color: #f6f4f0;
-      padding: 1.2rem 2rem 0.6rem;
+      max-width: 1200px;
+      margin: 0 auto 2rem auto;
+      background: #1e2b2f;
       border-radius: 0 0 24px 24px;
-      margin-bottom: 2rem;
       box-shadow: 0 6px 14px rgba(0,0,0,0.08);
       display: flex;
       flex-direction: column;
-      align-items: center;
+      padding: 0;
     }
 
     #course-title {
@@ -37,23 +30,27 @@
       font-weight: 600;
       font-size: 1.8rem;
       letter-spacing: -0.3px;
-      color: #f5e7d9;  /* warm ivory */
-      margin-bottom: 0.4rem;
+      color: #f5e7d9;
+      text-align: center;
+      padding: 1.2rem 2rem 0.8rem;
     }
 
-    /* navigation under the title */
+    /* ----- NAV: usa FLEX ----- */
     nav {
       width: 100%;
-      margin-top: 0.3rem;
+      background: #1e2b2f;
+      border-top: 1px solid rgba(255,255,255,0.1);
     }
 
     .navigation {
-      display: flex;
+      display: flex;           /* ✅ display: flex */
       justify-content: center;
       gap: 2.2rem;
       list-style: none;
       flex-wrap: wrap;
-      padding: 0.3rem 0 0.2rem;
+      padding: 0.8rem 0;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .navigation li a {
@@ -61,18 +58,26 @@
       font-weight: 500;
       text-decoration: none;
       font-size: 1.05rem;
-      padding: 0.4rem 0.2rem;
+      padding: 0.4rem 0.8rem;
       border-bottom: 2px solid transparent;
       transition: 0.2s ease;
+      display: block;
     }
 
+    /* ✅ :hover pseudoclass */
     .navigation li a:hover {
       color: #ffffff;
-      border-bottom-color: #d4b68a;  /* warm accent */
-      transform: translateY(-1px);
+      border-bottom-color: #d4b68a;
+      transform: translateY(-2px);
     }
 
-    /* ----- main heading (name) ----- */
+    /* ===== MAIN RULES ===== */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.5rem 0;
+    }
+
     h1 {
       font-family: 'Fraunces', serif;
       font-weight: 700;
@@ -84,41 +89,39 @@
       padding-left: 1.4rem;
     }
 
-    /* ----- card grid (2 columns) ----- */
+    /* ===== GRID LAYOUT ===== */
     .card-container {
-      display: grid;
+      display: grid;           /* ✅ display: grid */
       grid-template-columns: 2fr 1fr;
       gap: 2rem;
       margin: 1.8rem 0 2.8rem 0;
     }
 
-    /* ----- card styles ----- */
+    /* ===== CARDS ===== */
     .card {
       background: #ffffff;
       border-radius: 28px;
       padding: 1.8rem 2rem 2.2rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
-      transition: 0.2s;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
     }
 
     .card h2 {
       font-family: 'Fraunces', serif;
       font-weight: 600;
       font-size: 1.9rem;
-      letter-spacing: -0.3px;
       color: #1e2b2f;
       border-bottom: 3px solid #d4b68a;
       padding-bottom: 0.5rem;
       margin-bottom: 1.6rem;
     }
 
-    /* ----- about card : image on the RIGHT side ----- */
+    /* About card: imagen a la derecha */
     .about-intro {
       display: flex;
       gap: 1.5rem;
       align-items: flex-start;
       margin-bottom: 1.5rem;
-      flex-direction: row-reverse;  /* image on the right */
+      flex-direction: row-reverse;
     }
 
     .profile-image {
@@ -132,7 +135,6 @@
 
     .about-intro p {
       font-size: 1.05rem;
-      font-weight: 400;
       color: #2c3e44;
       margin: 0;
       flex: 1;
@@ -150,7 +152,6 @@
       font-weight: 600;
       font-size: 1.6rem;
       color: #1e2b2f;
-      margin-top: 0.2rem;
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
@@ -181,8 +182,6 @@
       width: 110px;
       height: auto;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.04);
-      display: block;
     }
 
     .flag-figure figcaption {
@@ -190,7 +189,6 @@
       font-weight: 500;
       color: #4d5f66;
       margin-top: 0.3rem;
-      letter-spacing: 0.3px;
     }
 
     .location-content p {
@@ -200,7 +198,7 @@
       line-height: 1.7;
     }
 
-    /* ----- resources card (web dev) ----- */
+    /* Recursos */
     .resource-list {
       list-style: none;
       padding: 0;
@@ -229,6 +227,7 @@
       font-size: 1.05rem;
     }
 
+    /* ✅ :hover en recursos */
     .resource-list a:hover {
       background: #d4b68a22;
       color: #a67c5c;
@@ -236,9 +235,10 @@
       text-decoration: underline wavy #b48c6c 1.5px;
     }
 
-    /* ----- footer ----- */
+    /* ===== FOOTER RULES ===== */
     footer {
-      margin-top: 3rem;
+      max-width: 1200px;
+      margin: 3rem auto 0 auto;
       background: #1e2b2f;
       color: #e8dfd3;
       text-align: center;
@@ -263,31 +263,21 @@
       font-size: 0.9rem;
     }
 
-    /* ----- responsiveness ----- */
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 760px) {
       .card-container {
         grid-template-columns: 1fr;
         gap: 1.5rem;
       }
 
-      header {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem 1rem 0.6rem;
-      }
-
       .navigation {
         gap: 1.2rem;
-        justify-content: center;
+        padding: 0.6rem 0;
       }
 
       .navigation li a {
         font-size: 0.95rem;
-      }
-
-      #course-title {
-        font-size: 1.4rem;
-        text-align: center;
+        padding: 0.3rem 0.6rem;
       }
 
       h1 {
@@ -297,7 +287,7 @@
       }
 
       .about-intro {
-        flex-direction: column-reverse;  /* image on top, then text */
+        flex-direction: column-reverse;
         align-items: center;
         text-align: center;
       }
@@ -328,6 +318,14 @@
       }
 
       .navigation {
-        flex-wrap: wrap;
-        gap: 0.8rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
       }
+
+      .navigation li a {
+        padding: 0.3rem 1rem;
+        width: 100%;
+        text-align: center;
+      }
+    }   
