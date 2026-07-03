@@ -43,7 +43,7 @@
     }
 
     .navigation {
-      display: flex;           /* ✅ display: flex */
+      display: flex;           
       justify-content: center;
       gap: 2.2rem;
       list-style: none;
@@ -64,7 +64,6 @@
       display: block;
     }
 
-    /* ✅ :hover pseudoclass */
     .navigation li a:hover {
       color: #ffffff;
       border-bottom-color: #d4b68a;
@@ -91,7 +90,7 @@
 
     /* ===== GRID LAYOUT ===== */
     .card-container {
-      display: grid;           /* ✅ display: grid */
+      display: grid;           
       grid-template-columns: 2fr 1fr;
       gap: 2rem;
       margin: 1.8rem 0 2.8rem 0;
@@ -227,7 +226,7 @@
       font-size: 1.05rem;
     }
 
-    /* ✅ :hover en recursos */
+    
     .resource-list a:hover {
       background: #d4b68a22;
       color: #a67c5c;
