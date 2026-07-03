@@ -7,6 +7,9 @@
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Eli Avila, and details about the course and the final project.">
     <meta name="author" content="Eli Avila">
     <link rel="stylesheet" href="styles/base.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -15,45 +18,51 @@
             <ul class="navigation">
                 <li><a href="https://www.linkedin.com/in/eli-avila/">LinkedIn</a></li>
                 <li><a href="https://byupw.instructure.com/">I-Learn</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/1?lang=spa&id=p15#p15">Scripture</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/1?lang=spa&amp;id=p15#p15">Scripture</a></li>
                 <li><a href="final-project.html">Final Project</a></li>
             </ul>
         </nav>
     </header>
-        <main>
-        <h1>Eli Avila</h1>
-        <div class="card-container">
-        <section class="card">
-            <h2>About Me</h2>
-            <p>Hi, I'm Eli Avila! I'm a student at BYU-Idaho, and I'm excited to be taking this course.</p>
-            <img src="images/profile.jpg" alt="Eli Avila" class="profile-image">
-            </div>
 
-            <hr class="divider">
-            <h3 class="location-title">Mexico</h3>
-            <div class="location-content">
-                <figure class="flag-figure">
-                    <img src="images/mexico-flag.jpg" alt="Flag of Mexico" class="flag-image">
-                    <figcaption>Flag of Mexico</figcaption>
-                </figure>
-                <p>
-Mexico is a country in North America known for its rich culture, delicious food, beautiful beaches, and ancient history. Its capital is Mexico City, and the official language is Spanish. Mexico is famous for landmarks like Chichén Itzá, colorful traditions, and warm hospitality.                </p>
-            </div>
-        </section>
-        <section class="card">
-            <h2>Web Resources</h2>
-            <ul>
-                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
-                <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
-            </ul>
-        </section>
+    <main>
+        <h1>Eli Avila</h1>
+
+        <div class="card-container">
+            <section class="card card--about">
+                <h2>About Me</h2>
+                <div class="about-intro">
+                    <img src="images/profile.jpg" alt="Eli Avila" class="profile-image">
+                    <p>Hi, I'm Eli Avila! I'm a student at BYU-Idaho, and I'm excited to be taking this course.</p>
+                </div>
+
+                <hr class="divider">
+
+                <h3 class="location-title">Puebla, Mexico</h3>
+                <div class="location-content">
+                    <figure class="flag-figure">
+                        <img src="images/mexico-flag.jpg" alt="Flag of Mexico" class="flag-image">
+                        <figcaption>Flag of Mexico</figcaption>
+                    </figure>
+                    <p>Mexico is a country in North America known for its rich culture, delicious food, beautiful beaches, and ancient history. Its capital is Mexico City, and the official language is Spanish. Mexico is famous for landmarks like Chich&eacute;n Itz&aacute;, colorful traditions, and warm hospitality.</p>
+                </div>
+            </section>
+
+            <section class="card card--resources">
+                <h2>Web Resources</h2>
+                <ul class="resource-list">
+                    <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                    <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                </ul>
+            </section>
         </div>
     </main>
+
     <footer>
-        <p>&copy; <span id="currentyear"></span>💥 Eli Avila💥 Mexico</p>
+        <p>&copy; <span id="currentyear"></span> Eli Avila &mdash; Mexico</p>
         <p id="lastModified"></p>
     </footer>
+
     <script src="scripts/getdates.js"></script>
 </body>
-</html>
+</html>x
