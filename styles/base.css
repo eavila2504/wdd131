@@ -1,4 +1,17 @@
-* {
+   :root {
+      --color-primary: #1e2b2f;
+      --color-secondary: #f6f4f0;
+      --color-accent: #d4b68a;
+      --color-accent-dark: #b48c6c;
+      --color-accent-light: #f5e7d9;
+      --color-text: #2c3e44;
+      --color-white: #ffffff;
+      --color-border: #e8dfd3;
+      --color-divider: #ece5db;
+    }
+
+    /* ===== RESET & BASE ===== */
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -6,22 +19,21 @@
 
     body {
       font-family: 'Work Sans', sans-serif;
-      background: #f6f4f0;
-      color: #1e2b2f;
+      background: var(--color-secondary);
+      color: var(--color-primary);
       line-height: 1.6;
       padding: 0 1.5rem;
     }
 
-    /* ===== HEADER RULES ===== */
+    /* ===== HEADER ===== */
     header {
       max-width: 1200px;
       margin: 0 auto 2rem auto;
-      background: #1e2b2f;
+      background: var(--color-primary);
       border-radius: 0 0 24px 24px;
       box-shadow: 0 6px 14px rgba(0,0,0,0.08);
       display: flex;
       flex-direction: column;
-      padding: 0;
     }
 
     #course-title {
@@ -30,20 +42,20 @@
       font-weight: 600;
       font-size: 1.8rem;
       letter-spacing: -0.3px;
-      color: #f5e7d9;
+      color: var(--color-accent-light);
       text-align: center;
       padding: 1.2rem 2rem 0.8rem;
     }
 
-    /* ----- NAV: usa FLEX ----- */
+    /* ===== NAV ===== */
     nav {
       width: 100%;
-      background: #1e2b2f;
+      background: var(--color-primary);
       border-top: 1px solid rgba(255,255,255,0.1);
     }
 
     .navigation {
-      display: flex;           
+      display: flex;
       justify-content: center;
       gap: 2.2rem;
       list-style: none;
@@ -54,7 +66,7 @@
     }
 
     .navigation li a {
-      color: #e8dfd3;
+      color: var(--color-border);
       font-weight: 500;
       text-decoration: none;
       font-size: 1.05rem;
@@ -65,12 +77,12 @@
     }
 
     .navigation li a:hover {
-      color: #ffffff;
-      border-bottom-color: #d4b68a;
+      color: var(--color-white);
+      border-bottom-color: var(--color-accent);
       transform: translateY(-2px);
     }
 
-    /* ===== MAIN RULES ===== */
+    /* ===== MAIN ===== */
     main {
       max-width: 1200px;
       margin: 0 auto;
@@ -82,15 +94,15 @@
       font-weight: 700;
       font-size: 2.8rem;
       letter-spacing: -0.5px;
-      color: #1e2b2f;
+      color: var(--color-primary);
       margin: 0.2rem 0 1.8rem 0;
-      border-left: 6px solid #b48c6c;
+      border-left: 6px solid var(--color-accent-dark);
       padding-left: 1.4rem;
     }
 
-    /* ===== GRID LAYOUT ===== */
+    /* ===== GRID ===== */
     .card-container {
-      display: grid;           
+      display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 2rem;
       margin: 1.8rem 0 2.8rem 0;
@@ -98,7 +110,7 @@
 
     /* ===== CARDS ===== */
     .card {
-      background: #ffffff;
+      background: var(--color-white);
       border-radius: 28px;
       padding: 1.8rem 2rem 2.2rem;
       box-shadow: 0 8px 20px rgba(0,0,0,0.04);
@@ -108,13 +120,13 @@
       font-family: 'Fraunces', serif;
       font-weight: 600;
       font-size: 1.9rem;
-      color: #1e2b2f;
-      border-bottom: 3px solid #d4b68a;
+      color: var(--color-primary);
+      border-bottom: 3px solid var(--color-accent);
       padding-bottom: 0.5rem;
       margin-bottom: 1.6rem;
     }
 
-    /* About card: imagen a la derecha */
+    /* ===== ABOUT CARD ===== */
     .about-intro {
       display: flex;
       gap: 1.5rem;
@@ -128,13 +140,13 @@
       height: 110px;
       object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #e8dfd3;
+      border: 3px solid var(--color-border);
       flex-shrink: 0;
     }
 
     .about-intro p {
       font-size: 1.05rem;
-      color: #2c3e44;
+      color: var(--color-text);
       margin: 0;
       flex: 1;
     }
@@ -142,7 +154,7 @@
     .divider {
       border: 0;
       height: 1px;
-      background: linear-gradient(to right, #d4b68a, #ece5db);
+      background: linear-gradient(to right, var(--color-accent), var(--color-divider));
       margin: 1.8rem 0;
     }
 
@@ -150,7 +162,7 @@
       font-family: 'Fraunces', serif;
       font-weight: 600;
       font-size: 1.6rem;
-      color: #1e2b2f;
+      color: var(--color-primary);
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
@@ -172,7 +184,7 @@
       flex-shrink: 0;
       margin: 0;
       text-align: center;
-      background: #f6f4f0;
+      background: var(--color-secondary);
       padding: 0.4rem 0.6rem 0.6rem;
       border-radius: 16px;
     }
@@ -192,12 +204,12 @@
 
     .location-content p {
       font-size: 1rem;
-      color: #2c3e44;
+      color: var(--color-text);
       margin: 0;
       line-height: 1.7;
     }
 
-    /* Recursos */
+    /* ===== RESOURCES ===== */
     .resource-list {
       list-style: none;
       padding: 0;
@@ -217,7 +229,7 @@
 
     .resource-list a {
       font-weight: 500;
-      color: #1e2b2f;
+      color: var(--color-primary);
       text-decoration: none;
       display: inline-block;
       padding: 0.2rem 0.4rem;
@@ -226,20 +238,19 @@
       font-size: 1.05rem;
     }
 
-    
     .resource-list a:hover {
-      background: #d4b68a22;
-      color: #a67c5c;
+      background: rgba(212, 182, 138, 0.13);
+      color: var(--color-accent-dark);
       transform: translateX(6px);
-      text-decoration: underline wavy #b48c6c 1.5px;
+      text-decoration: underline wavy var(--color-accent-dark) 1.5px;
     }
 
-    /* ===== FOOTER RULES ===== */
+    /* ===== FOOTER ===== */
     footer {
       max-width: 1200px;
       margin: 3rem auto 0 auto;
-      background: #1e2b2f;
-      color: #e8dfd3;
+      background: var(--color-primary);
+      color: var(--color-border);
       text-align: center;
       padding: 2rem 1.5rem 1.8rem;
       border-radius: 40px 40px 20px 20px;
@@ -327,4 +338,4 @@
         width: 100%;
         text-align: center;
       }
-    }   
+    }
