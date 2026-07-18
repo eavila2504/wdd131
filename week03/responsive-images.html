@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <meta name="description" content="A webpage demonstrating responsive images using the 'picture' element and srcset attribute.">
+    <meta name="author" content="Eli Avila">
+    <link rel="stylesheet" href="styles/images.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(max-width: 1000px)">
+                <source srcset="images/hero--medium.webp" media="(max-width: 500px)">
+                <img src="images/hero-small.webp" alt="Manthi Utah Temple" width="500" height="250">
+            </picture>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
