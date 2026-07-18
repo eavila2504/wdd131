@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Project - WDD131 - Eli Avila</title>
+    <meta name="description" content="Place Project - WDD131 - Eli Avila, and details about the place project.">
+    <meta name="author" content="Eli Avila">
+    <link rel="stylesheet" href="styles/">
+    <script src="scripts/place.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1 id="country">Mexico</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(max-width: 1000px)">
+                <source srcset="images/hero--medium.webp" media="(max-width: 500px)">
+                <img src="images/hero-small.webp" alt="Manthi Utah Temple" width="500" height="250">
+            </picture>
+        </div>
+
+        <div class="icon">
+            <img src="images/weather-icon.svg" alt="Weather Icon partial cloudy">
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Eli Avila &mdash; Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
