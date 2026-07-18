@@ -1,0 +1,192 @@
+/* ===========================================================
+   Mexico | Place Project — WDD131
+   =========================================================== */
+
+:root {
+  /* Color palette — inspired by the Mexican flag and marigold (cempasúchil) */
+  --color-red: #a6192e;
+  --color-red-dark: #7e1121;
+  --color-green: #14532d;
+  --color-green-dark: #0d3a1f;
+  --color-gold: #d4a017;
+  --color-cream: #faf6ee;
+  --color-ink: #21241f;
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Public Sans", -apple-system, Segoe UI, sans-serif;
+
+  /* Layout */
+  --gap: 1rem;
+  --radius: 10px;
+  --card-shadow: 0 12px 30px rgba(33, 36, 31, 0.22);
+  --max-width: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-cream);
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background-color: var(--color-red);
+  padding: 1.6rem 1rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  color: var(--color-cream);
+  font-size: clamp(1.9rem, 5vw, 2.75rem);
+  letter-spacing: 0.02em;
+}
+
+/* Papel-picado inspired scalloped divider — the signature detail */
+.picado {
+  height: 22px;
+  background-color: var(--color-green);
+  background-image:
+    linear-gradient(135deg, var(--color-cream) 25%, transparent 25.5%),
+    linear-gradient(225deg, var(--color-cream) 25%, transparent 25.5%);
+  background-size: 22px 22px;
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}
+
+/* ---------- Hero + cards ---------- */
+.hero-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+  height: 62vh;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.card {
+  background-color: rgba(250, 246, 238, 0.97);
+  border-top: 4px solid var(--color-gold);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+  width: 100%;
+}
+
+.card h2 {
+  color: var(--color-green-dark);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.fact-list .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(33, 36, 31, 0.1);
+  font-size: 0.95rem;
+}
+
+.fact-list .row:last-child {
+  border-bottom: none;
+}
+
+.fact-list dt {
+  font-weight: 600;
+  color: var(--color-red-dark);
+}
+
+.fact-list dd {
+  text-align: right;
+}
+
+/* Mobile weather icon (SVG) — shown by default, hidden on wide layout */
+.weather-icon-mobile {
+  display: block;
+  margin: 0 auto 0.75rem;
+}
+
+/* Wide-view weather icon — CSS pseudo-element, hidden by default */
+.weather-heading::after {
+  content: none;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: var(--color-red);
+  color: var(--color-cream);
+  text-align: center;
+  padding: 1.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+.site-footer p + p {
+  margin-top: 0.35rem;
+  opacity: 0.9;
+}
+
+/* ===========================================================
+   Wide view — cards float over the hero image
+   =========================================================== */
+@media (min-width: 800px) {
+  .hero-wrap {
+    display: block;
+  }
+
+  .hero-img {
+    height: 78vh;
+    max-height: 640px;
+  }
+
+  .card {
+    position: absolute;
+    width: min(320px, 40%);
+    box-shadow: var(--card-shadow);
+  }
+
+  .card--data {
+    top: 1.75rem;
+    left: 1.75rem;
+  }
+
+  .card--weather {
+    bottom: 1.75rem;
+    right: 1.75rem;
+  }
+
+  .weather-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  /* Pseudo-element weather icon for the wide layout */
+  .weather-heading::after {
+    content: "\26C5";
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+  .weather-icon-mobile {
+    display: none;
+  }
+}

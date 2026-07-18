@@ -6,7 +6,10 @@
     <title>Place Project - WDD131 - Eli Avila</title>
     <meta name="description" content="Place Project - WDD131 - Eli Avila, and details about the place project.">
     <meta name="author" content="Eli Avila">
-    <link rel="stylesheet" href="styles/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 
 </head>
@@ -14,19 +17,39 @@
     <header>
         <h1 id="country">Mexico</h1>
     </header>
-    <main>
+     <main>
         <div class="hero">
             <picture>
-                <source srcset="images/hero-large.webp" media="(max-width: 1000px)">
-                <source srcset="images/hero--medium.webp" media="(max-width: 500px)">
-                <img src="images/hero-small.webp" alt="Manthi Utah Temple" width="500" height="250">
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero--medium.webp" media="(max-width: 1000px)">
+                <img src="images/hero-large.webp" alt="Manti Utah Temple" width="500" height="250" class="hero-img">
             </picture>
+ 
+            <section class="card card--data">
+                <h2>Data</h2>
+                <dl>
+                    <div class="row"><dt>Area:</dt><dd>1,964,375 sq km</dd></div>
+                    <div class="row"><dt>Population:</dt><dd>128,455,567</dd></div>
+                    <div class="row"><dt>Capital:</dt><dd>Mexico City</dd></div>
+                    <div class="row"><dt>Languages:</dt><dd>Spanish</dd></div>
+                    <div class="row"><dt>Currency:</dt><dd>Mexican Peso</dd></div>
+                    <div class="row"><dt>Time Zone:</dt><dd>UTC-6</dd></div>
+                    <div class="row"><dt>Calling Code:</dt><dd>+52</dd></div>
+                    <div class="row"><dt>Internet TLD:</dt><dd>.mx</dd></div>
+                </dl>
+            </section>
+ 
+            <section class="card card--weather">
+                <h2>Weather <span class="icon"><img src="images/weather-icon.svg" alt="Weather icon: partly cloudy" width="24" height="24"></span></h2>
+                <dl>
+                    <div class="row"><dt>Temperature:</dt><dd id="temperature">22 &deg;C</dd></div>
+                    <div class="row"><dt>Conditions:</dt><dd id="conditions">Partly Cloudy</dd></div>
+                    <div class="row"><dt>Wind:</dt><dd id="wind">8 km/h</dd></div>
+                    <div class="row"><dt>Wind Chill:</dt><dd id="windchill">21.5 &deg;C</dd></div>
+                </dl>
+            </section>
         </div>
 
-        <div class="icon">
-            <img src="images/weather-icon.svg" alt="Weather Icon partial cloudy">
-        </div>
-        
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> Eli Avila &mdash; Mexico</p>
