@@ -3,57 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place Project - WDD131 - Eli Avila</title>
-    <meta name="description" content="Place Project - WDD131 - Eli Avila, and details about the place project.">
+    <title>Mexico | Place Project - WDD131 - Eli Avila</title>
+    <meta name="description" content="Place Project for WDD131: an overview of Mexico, including country data and current local weather.">
     <meta name="author" content="Eli Avila">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
-
 </head>
 <body>
-    <header>
-        <h1 id="country">Mexico</h1>
+
+    <header class="site-header">
+        <h1 id="country">M&eacute;xico</h1>
     </header>
-     <main>
-        <div class="hero">
-            <picture>
+
+    <div class="picado" aria-hidden="true"></div>
+
+    <main>
+        <div class="hero-wrap">
                 <source srcset="images/hero-small.webp" media="(max-width: 500px)">
-                <source srcset="images/hero--medium.webp" media="(max-width: 1000px)">
-                <img src="images/hero-large.webp" alt="Manti Utah Temple" width="500" height="250" class="hero-img">
+                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+                <img src="images/hero-large.webp" alt="eagle flying" width="500" height="250" class="hero-img">
             </picture>
- 
-            <section class="card card--data">
-                <h2>Data</h2>
-                <dl>
-                    <div class="row"><dt>Area:</dt><dd>1,964,375 sq km</dd></div>
+
+            <section class="card card--data" aria-labelledby="dataHeading">
+                <h2 id="dataHeading">Data</h2>
+                <dl class="fact-list">
+                    <div class="row"><dt>Area:</dt><dd>1,964,375 sq&nbsp;km</dd></div>
                     <div class="row"><dt>Population:</dt><dd>128,455,567</dd></div>
                     <div class="row"><dt>Capital:</dt><dd>Mexico City</dd></div>
                     <div class="row"><dt>Languages:</dt><dd>Spanish</dd></div>
                     <div class="row"><dt>Currency:</dt><dd>Mexican Peso</dd></div>
-                    <div class="row"><dt>Time Zone:</dt><dd>UTC-6</dd></div>
+                    <div class="row"><dt>Time Zone:</dt><dd>UTC&minus;6</dd></div>
                     <div class="row"><dt>Calling Code:</dt><dd>+52</dd></div>
                     <div class="row"><dt>Internet TLD:</dt><dd>.mx</dd></div>
                 </dl>
             </section>
- 
-            <section class="card card--weather">
-                <h2>Weather <span class="icon"><img src="images/weather-icon.svg" alt="Weather icon: partly cloudy" width="24" height="24"></span></h2>
-                <dl>
-                    <div class="row"><dt>Temperature:</dt><dd id="temperature">22 &deg;C</dd></div>
+
+            <section class="card card--weather" aria-labelledby="weatherHeading">
+                <h2 id="weatherHeading" class="weather-heading">Weather</h2>
+                <img class="weather-icon-mobile" src="images/weather-icon.svg" alt="Partly cloudy" width="40" height="40">
+                <dl class="fact-list">
+                    <div class="row"><dt>Temperature:</dt><dd id="temperature">10&deg;C</dd></div>
                     <div class="row"><dt>Conditions:</dt><dd id="conditions">Partly Cloudy</dd></div>
-                    <div class="row"><dt>Wind:</dt><dd id="wind">8 km/h</dd></div>
-                    <div class="row"><dt>Wind Chill:</dt><dd id="windchill">21.5 &deg;C</dd></div>
+                    <div class="row"><dt>Wind:</dt><dd id="wind">5 km/h</dd></div>
+                    <div class="row"><dt>Wind Chill:</dt><dd id="windchill">&hellip;</dd></div>
                 </dl>
             </section>
         </div>
-
     </main>
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Eli Avila &mdash; Mexico</p>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentyear"></span> &#127804; Eli Avila &#127804; M&eacute;xico</p>
         <p id="lastModified"></p>
     </footer>
+
 </body>
 </html>
