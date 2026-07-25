@@ -6,21 +6,31 @@
     <title>Lazyload - WDD131 - Eli Avila</title>
     <meta name="description" content="activity to practice lazyload in images using in websites">
     <meta name="author" content="Eli Avila"> 
-    <link rel="stylesheets" href="images/lazy.css">
+    <link rel="stylesheet" href="styles/lazy.css">
      <script src="scripts/lazyload.js" defer></script>
 </head>
 <body>
     <head></head>
     <main>
         <h1>Lazyload Activity</h1>
-
-        <img src="images/postal-chappel.webp" alt="" loading="lazy" width="600px" height="400px">
-        <img src="images/" alt="" loading="lazy" width="600px" height="600px">
-        <img src="images/" alt="" loading="lazy" width="600px" height="400px">
-        <img src="images/" alt="" loading="lazy" width="600px" height="400px">
-        <img src="images/" alt="" loading="lazy" width="600px" height="400px">
-        <img src="images/" alt="" loading="lazy" width="600px" height="400px">
-        
+        <picture>
+            <img src="images/postal-chappel.webp" alt="tijuana's chappel  with sepia tone" loading="lazy" width="600" height="300">
+        </picture>
+        <picture>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDvjN9fUIqgU3rQmc7eF8hYuRWugkGggM4v91VDSZ6UA&s=10" alt="white electric guitar" loading="lazy" width="650" height="250">
+        </picture>
+        <picture>
+            <img src="images/night-tijuana.webp" alt="tijuana at night" loading="lazy" width="450" height="250" >  
+        </picture>
+        <picture>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOi4cxkGWPbX2GXKuAr50X_zv-8fxpibLrsYQhHpV6vA&s=10" loading="lazy" alt="yellow flowers in the land" width="550" height="335">
+        </picture>
+        <picture>
+            <img src="images/orange-sunset.webp" alt="orange sunset with palms" loading="lazy" width="450" height="250">
+        </picture>
+        <picture>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijFS7k_EzfSmxP3b1_8Q1vYXfo43TPKLD8Aed5WDVPg&s=10"  loading="lazy" alt="skater boy laying in bed" width="450" height="400">
+        </picture>
     </main>
     <footer class="site-footer">
         <p>&copy; <span id="currentyear"></span> &#127804; Eli Avila &#127804; M&eacute;xico</p>
