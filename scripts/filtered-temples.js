@@ -105,7 +105,7 @@ const temples = [
     location: "Puebla, Mexico",
     dedicated: "2024, May, 19",
     area: "35865",
-    imagenUrl: "https://churchofjesuschristtemples.org/assets/img/temples/puebla-mexico-temple/puebla-mexico-temple-46342.jpg"
+    imagenUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6BSEaJwKBKNNhIeumFeYzHLD7PluZ3MByrCNqdXSPjw&s"
   },
   
 
