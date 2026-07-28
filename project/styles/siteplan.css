@@ -1,0 +1,30 @@
+/* ===========================================================
+  site plan| final Project — WDD131
+   =========================================================== */
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+     /* color */
+    --blackred: #7e1121;
+    --shadow: #21241f;
+    --color: #ffffff;
+
+    /* Typography */
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Public Sans", -apple-system, Segoe UI, sans-serif;
+
+}
+
+header, footer {
+    background-color: var(--blackred);
+    color: var(--color);
+    padding: 1.6rem 1rem;
+    text-align: center;
+    
+}
