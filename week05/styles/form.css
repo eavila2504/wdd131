@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/*----------- header & footer --------------*/
+
+header, footer {
+    background-color: purple;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 1rem;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: .85rem;
+}
+
+/*----------- FORM --------------*/
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.wf2 fieldset {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 2% 1.5rem 2%;
+    background-color: #f6f2f8;
+}
+
+.wf2 legend {
+    color: #445ba9;
+    font-weight: bold;
+    padding: 0 .5rem;
+}
+
+.wf2 legend .optional {
+    color: #666;
+    font-weight: normal;
+    font-size: .85rem;
+}
+
+.wf2 label {
+    display: block;
+    padding-top: 1rem;
+    color: #9c2c13;
+    font-size: .9rem;
+}
+
+.wf2 div {
+    padding-top: 1rem;
+    color: #445ba9;
+    font-size: .9rem;
+}
+
+.wf2 .rating {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding-top: 1rem;
+}
+
+.wf2 .rating label {
+    display: block;
+    padding-top: 0;
+    font-size: 1.3rem;
+    color: #9c2c13;
+    text-align: center;
+    cursor: pointer;
+}
+
+.wf2 .rating input[type="radio"] {
+    display: block;
+    margin: .4rem auto 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.wf2 input[type="text"],
+.wf2 input[type="tel"],
+.wf2 input[type="email"],
+.wf2 input[type="url"],
+.wf2 input[type="date"],
+.wf2 select,
+.wf2 input[type="number"]
+{
+    background-color: #eee;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 320px;
+    appearance: none;
+}
+
+.wf2 textarea {
+    background-color: #eee;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 100%;
+}
+
+.wf2 input[type="radio"],
+.wf2 input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.wf2 input[type="checkbox"] + label,
+label > input[type="checkbox"] {
+    display: inline;
+}
+
+.wf2 fieldset label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    color: #333;
+}
+
+.wf2 input[type="submit"] {
+    background-image: linear-gradient(#9c2c13, #6f200e);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: .9rem;
+    width: 96%;
+    max-width: 400px;
+    display: block;
+    margin: 1rem auto 2rem auto;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.wf2 input[type="submit"]:hover {
+    background-image: linear-gradient(#6f200e, #9c2c13);
+}
+
+.wf2 input:required {
+    border-bottom: solid 4px #d33;
+}
+
+.wf2 input:required:valid {
+    border-bottom: solid 4px #2a8;
+}
