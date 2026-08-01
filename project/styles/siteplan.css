@@ -105,6 +105,27 @@
         height: 4.5rem;
     }
 
+    .swatch-black {
+        background-color: var(--shadow);
+    }
+
+    .swatch-red {
+        background-color: var(--blackred);
+    }
+
+    .swatch-mustard {
+        background-color: var(--mustard);
+    }
+
+    .swatch-concrete {
+        background-color: var(--concrete);
+        border: 1px solid var(--concrete-dim);
+    }
+
+    .sample-body-large {
+        font-size: 1rem;
+    }
+
     .swatch-label {
         background-color: var(--color);
         padding: 0.6rem 0.75rem;
@@ -191,12 +212,68 @@
         flex-direction: column;
         gap: 0.4rem;
     }
-    .wf-mobile .wf-header   { height: 2.2rem; }
-    .wf-mobile .wf-nav      { height: 1.6rem; }
+    .wf-mobile .wf-header   {
+        height: 2.2rem;
+        position: relative;
+    }
     .wf-mobile .wf-hero     { height: 4.5rem; }
     .wf-mobile .wf-content  { height: 3.5rem; }
     .wf-mobile .wf-content2 { height: 3.5rem; }
     .wf-mobile .wf-footer   { height: 2rem; }
+
+    .wf-note {
+        font-size: 0.7rem;
+        color: var(--shadow);
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    /* hamburger button */
+    .wf-hamburger {
+        position: absolute;
+        right: 0.4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.6rem;
+        height: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .wf-hamburger span {
+        display: block;
+        width: 1.1rem;
+        height: 2px;
+        background-color: var(--shadow);
+        border-radius: 1px;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .wf-hamburger[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+    }
+    .wf-hamburger[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+    }
+    .wf-hamburger[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+    /* toggleable nav panel */
+    .wf-nav-panel {
+        height: 2.4rem;
+        background-color: var(--mustard);
+        color: var(--ink);
+        border-style: solid;
+        font-weight: 600;
+    }
 
     /* desktop wireframe: wider, some side-by-side content */
     .wf-desktop {

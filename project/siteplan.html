@@ -11,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<script src="scripts/siteplan.js" defer></script>
 <link rel="stylesheet" href="styles/siteplan.css">
+<script src="scripts/siteplan.js" defer></script>
 </head>
 <body>
 
@@ -59,19 +59,19 @@
         <p>Four colors carry the whole site: a near-black for structure, a deep red for accents and emphasis, a curb-paint yellow for highlights, and an off-white concrete tone for backgrounds and body text areas.</p>
         <div class="swatches">
             <div class="swatch">
-                <div class="swatch-color" style="background-color:#21241f;"></div>
+                <div class="swatch-color swatch-black"></div>
                 <div class="swatch-label"><strong>#21241f — Grip-tape black</strong>Header, footer background, structural text</div>
             </div>
             <div class="swatch">
-                <div class="swatch-color" style="background-color:#7e1121;"></div>
+                <div class="swatch-color swatch-red"></div>
                 <div class="swatch-label"><strong>#7e1121 — Deck red</strong>Headings, section labels, footer background</div>
             </div>
             <div class="swatch">
-                <div class="swatch-color" style="background-color:#d9a441;"></div>
+                <div class="swatch-color swatch-mustard"></div>
                 <div class="swatch-label"><strong>#d9a441 — Curb-paint yellow</strong>Accents, card borders, difficulty tags</div>
             </div>
             <div class="swatch">
-                <div class="swatch-color" style="background-color:#ece8de; border:1px solid #d9d4c6;"></div>
+                <div class="swatch-color swatch-concrete"></div>
                 <div class="swatch-label"><strong>#ece8de — Concrete</strong>Page background</div>
             </div>
         </div>
@@ -86,7 +86,7 @@
         </div>
         <div class="type-sample">
             <span class="sample-label">Public Sans — Body text</span>
-            <div class="sample-body" style="font-size:1rem;">Used for paragraphs, navigation, labels, and all long-form reading text. A clean, highly legible sans-serif that keeps the page easy to read at small sizes.</div>
+            <div class="sample-body sample-body-large">Used for paragraphs, navigation, labels, and all long-form reading text. A clean, highly legible sans-serif that keeps the page easy to read at small sizes.</div>
         </div>
     </section>
 
@@ -98,13 +98,19 @@
             <div class="wireframe wf-mobile">
                 <h3>Mobile</h3>
                 <div class="wf-frame">
-                    <div class="wf-block wf-header">Header / Site Name</div>
-                    <div class="wf-block wf-nav">Nav</div>
+                    <div class="wf-block wf-header">
+                        Header / Site Name
+                        <button id="wfHamburger" class="wf-hamburger" type="button" aria-expanded="false" aria-controls="wfMobileNav" aria-label="Toggle navigation menu">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>
+                    <div id="wfMobileNav" class="wf-block wf-nav-panel" hidden>Home &middot; History &middot; Skaters &middot; Tricks</div>
                     <div class="wf-block wf-hero">Hero / Tagline</div>
                     <div class="wf-block wf-content">History Section</div>
                     <div class="wf-block wf-content2">Skaters / Tricks</div>
                     <div class="wf-block wf-footer">Footer</div>
                 </div>
+                <p class="wf-note">Tap the &#9776; icon above to preview the mobile menu behavior.</p>
             </div>
 
             <div class="wireframe wf-desktop">
