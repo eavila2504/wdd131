@@ -174,3 +174,30 @@ label > input[type="checkbox"] {
 .wf2 input:required:valid {
     border-bottom: solid 4px #2a8;
 }
+
+/*----------- responsive --------------*/
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .wf2 .rating {
+        gap: .75rem;
+        justify-content: space-between;
+    }
+
+    .wf2 .rating label {
+        font-size: 1rem;
+    }
+
+    .wf2 input[type="text"],
+    .wf2 input[type="date"],
+    .wf2 select {
+        max-width: 100%;
+    }
+
+    .wf2 input[type="submit"] {
+        width: 100%;
+    }
+}
