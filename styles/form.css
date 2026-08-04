@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+:root {
+     --primary-color: rgb(233, 233, 233);
+     --font-color: black;
+     --optional-color: #9c2c13;
+}
+
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     background-color: #fff;
@@ -44,31 +50,31 @@ main {
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: .5rem 2% 1.5rem 2%;
-    background-color: #f6f2f8;
+    background-color: var(--primary-color);
 }
 
 .wf2 legend {
-    color: #445ba9;
+    color: var(--font-color);
     font-weight: bold;
     padding: 0 .5rem;
 }
 
 .wf2 legend .optional {
-    color: #666;
+    color: var(--optional-color);
     font-weight: normal;
     font-size: .85rem;
 }
 
 .wf2 label {
     display: block;
-    padding-top: 1rem;
-    color: #9c2c13;
+    padding: .5rem;
+    color: var(--optional-color);
     font-size: .9rem;
 }
 
 .wf2 div {
-    padding-top: 1rem;
-    color: #445ba9;
+    padding: .1rem;
+    color: var(--primary-color);
     font-size: .9rem;
 }
 
@@ -83,7 +89,7 @@ main {
     display: block;
     padding-top: 0;
     font-size: 1.3rem;
-    color: #9c2c13;
+    color: var(--optional-color);
     text-align: center;
     cursor: pointer;
 }
@@ -110,7 +116,7 @@ main {
 .wf2 select,
 .wf2 input[type="number"]
 {
-    background-color: #eee;
+    background-color: var(--primary-color);
     display: block;
     border: solid 1px #999;
     border-radius: 6px;
@@ -122,7 +128,7 @@ main {
 }
 
 .wf2 textarea {
-    background-color: #eee;
+    background-color: var(--primary-color);
     display: block;
     border: solid 1px #999;
     border-radius: 6px;
@@ -132,21 +138,28 @@ main {
     max-width: 100%;
 }
 
+.wf2 textarea::placeholder {
+    color: var(--optional-color);
+}
+
+.wf2 input:focus-visible,
+.wf2 select:focus-visible,
+.wf2 textarea:focus-visible {
+    outline: 3px solid var(--font-color);
+    outline-offset: 2px;
+}
+
 .wf2 input[type="radio"],
 .wf2 input[type="checkbox"] {
     margin-right: 6px;
 }
 
-.wf2 input[type="checkbox"] + label,
-label > input[type="checkbox"] {
-    display: inline;
-}
-
-.wf2 fieldset label:has(input[type="checkbox"]) {
+.wf2 .checkbox-label {
     display: flex;
     align-items: center;
     gap: .4rem;
     color: #333;
+    padding-top: 1rem;
 }
 
 .wf2 input[type="submit"] {
@@ -167,12 +180,25 @@ label > input[type="checkbox"] {
     background-image: linear-gradient(#6f200e, #9c2c13);
 }
 
-.wf2 input:required {
+.wf2 input:required,
+.wf2 select:required {
     border-bottom: solid 4px #d33;
 }
 
-.wf2 input:required:valid {
+.wf2 input:required:valid,
+.wf2 select:required:valid {
     border-bottom: solid 4px #2a8;
+}
+
+.required-mark {
+    color: #d33;
+    font-weight: bold;
+}
+
+.required-key {
+    color: #555;
+    font-size: .85rem;
+    margin: 0 0 -1rem 0;
 }
 
 /*----------- responsive --------------*/
@@ -184,7 +210,6 @@ label > input[type="checkbox"] {
 
     .wf2 .rating {
         gap: .75rem;
-        justify-content: space-between;
     }
 
     .wf2 .rating label {

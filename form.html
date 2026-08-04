@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Product Review" - WDD131 - Eli Avila </title>
-    <meta name="description" content="Little activity for the WDD131 course focused in form handling.">
+    <title>Product Review - WDD131</title>
+    <meta name="description" content="Form Activity for WDD131">
     <meta name="author" content="Eli Avila">
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
@@ -15,18 +15,20 @@
     </header>
 
     <main>
+        <p class="required-key"><span class="required-mark" aria-hidden="true">*</span> indicates a required field</p>
         <form method="get" action="review.html" class="wf2">
 
             <fieldset>
-                <legend>Product Name</legend>
+                <legend>Product Name <span class="required-mark" aria-hidden="true">*</span><span class="visually-hidden">(required)</span></legend>
                 <label for="product">Product Name</label>
                 <select id="product" name="product" required>
                     <option value="" disabled selected>Select a Product ...</option>
+                    <!-- Remaining options are added dynamically by scripts/form.js -->
                 </select>
             </fieldset>
 
             <fieldset>
-                <legend>Overall Rating</legend>
+                <legend>Overall Rating <span class="required-mark" aria-hidden="true">*</span><span class="visually-hidden">(required)</span></legend>
                 <div class="rating">
                     <label for="rating1">&starf;<span class="visually-hidden">1 star</span></label>
                     <input type="radio" id="rating1" name="rating" value="1" required>
@@ -46,7 +48,7 @@
             </fieldset>
 
             <fieldset>
-                <legend>Date of Installation</legend>
+                <legend>Date of Installation <span class="required-mark" aria-hidden="true">*</span><span class="visually-hidden">(required)</span></legend>
                 <label for="installation-date">Date of Installation</label>
                 <input type="date" id="installation-date" name="installation-date" required>
             </fieldset>
@@ -55,17 +57,16 @@
                 <legend>Which features did you find useful in the product?</legend>
                 <div>(Check all that apply)</div>
 
-                <label for="feature1"><input type="checkbox" id="feature1" name="features" value="durability"> Durability</label>
-                <label for="feature2"><input type="checkbox" id="feature2" name="features" value="ease-of-use"> Ease of Use</label>
-                <label for="feature3"><input type="checkbox" id="feature3" name="features" value="performance"> Performance</label>
-                <label for="feature4"><input type="checkbox" id="feature4" name="features" value="design"> Design</label>
+                <label for="feature1" class="checkbox-label"><input type="checkbox" id="feature1" name="features" value="durability"> Durability</label>
+                <label for="feature2" class="checkbox-label"><input type="checkbox" id="feature2" name="features" value="ease-of-use"> Ease of Use</label>
+                <label for="feature3" class="checkbox-label"><input type="checkbox" id="feature3" name="features" value="performance"> Performance</label>
+                <label for="feature4" class="checkbox-label"><input type="checkbox" id="feature4" name="features" value="design"> Design</label>
             </fieldset>
 
             <fieldset>
                 <legend>Written Review <span class="optional">(Optional)</span></legend>
                 <label for="review" class="visually-hidden">Written Review</label>
                 <textarea id="review" name="review" rows="5" cols="50" placeholder="Share your thoughts about the product..."></textarea>
-            </fieldset>
 
             <fieldset>
                 <legend>Your Name <span class="optional">(Optional)</span></legend>
