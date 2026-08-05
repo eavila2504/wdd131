@@ -1,14 +1,15 @@
-// Street Boarder — small footer utility
-// Fills in the current year and the page's last-modified date.
+// ===========================================================
+// site plan | final Project — WDD131
+// ===========================================================
 
-document.addEventListener('DOMContentLoaded', () => {
-    const yearSpan = document.getElementById('currentyear');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+    const yearEl = document.getElementById("currentyear");
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
     }
 
-    const modifiedP = document.getElementById('lastModified');
-    if (modifiedP) {
-        modifiedP.textContent = `Last modified: ${document.lastModified}`;
+    const modifiedEl = document.getElementById("lastModified");
+    if (modifiedEl) {
+        modifiedEl.textContent = `Last Modified: ${document.lastModified}`;
     }
 });

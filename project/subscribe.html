@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Boarder — A Brief History of Skateboarding</title>
+    <meta name="description" content="A brief history of skateboarding, its most influential skaters, and the tricks that built street skating.">
+    <meta name="author" content="Eli Avila">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/streetboarder.css">
+    <script src="scripts/streetboarder.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <p class="eyebrow">Est. 1950 &middot; Concrete &amp; Culture</p>
+        <h1>Street<span class="tilt">Boarder</span></h1>
+        <p class="tagline">Not a sport, but a lifestyle.</p>
+       
+          <nav>
+            <ul class="site-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skaters.html">Skaters</a></li>
+                <li><a href="tricks.html">Tricks</a></li>
+                <li><a href="subscribe.html">Subscribe!</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <fieldset>
+            <legend>Subscribe to our newsletter</legend>
+            <form action="subscribe.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Get Letter</button>
+            </form>
+        </fieldset>
+    </main>
+ <footer class="site-footer">
+        <p>&copy; <span id="currentyear"></span> &#127804; Eli Avila &#127804; M&eacute;xico</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>

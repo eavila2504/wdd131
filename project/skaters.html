@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skaters</title>
+    <meta name="description" content="Most important skaters in the history of skateboarding.">
+    <meta name="author" content="Eli Avila">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/streetboarder.css">
+    <script src="scripts/streetboarder.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <p class="eyebrow">Est. 1950 &middot; Concrete &amp; Culture</p>
+        <h1>Street<span class="tilt">Boarder</span></h1>
+        <p class="tagline">Not a sport, but a lifestyle.</p>
+        <div class="logo">
+            <img src="images/logo.svg" alt="Street Boarder logo" width="100" height="100">
+        </div>
+        <nav>
+            <ul class="site-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skaters.html">Skaters</a></li>
+                <li><a href="tricks.html">Tricks</a></li>
+                <li><a href="subscribe.html">Subscribe!</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="skaters" aria-labelledby="skaters-heading">
+            <div class="section-head">
+                <p class="eyebrow">02 &mdash; Icons</p>
+                <h1 id="skaters-heading">Skaters who shaped the sport</h1>
+                <p class="lede">A handful of names come up in nearly every conversation about how skateboarding got here.</p>
+            </div>
+
+            <div class="card-grid">
+                <article class="skater-card">
+                    <h2>Rodney Mullen</h2>
+                    <p class="role">The godfather of flat-ground tricks</p>
+                    <p>
+                        Widely credited with inventing the flatground ollie, the kickflip, and dozens of
+                        other flip tricks that are now considered the basic vocabulary of street skating.
+                    </p>
+                </article>
+                <article class="skater-card">
+                    <h2>Tony Hawk</h2>
+                    <p class="role">Vert skating's most recognizable face</p>
+                    <p>
+                        Landed the first documented 900 in competition and helped carry skateboarding into
+                        mainstream pop culture through contests, media, and a namesake video game series.
+                    </p>
+                </article>
+                <article class="skater-card">
+                    <h2>Nyjah Huston</h2>
+                    <p class="role">Modern street skating's dominant competitor</p>
+                    <p>
+                        One of the most decorated street skaters of his generation, known for technical
+                        precision on rails and stairs at a level few have matched.
+                    </p>
+                </article>
+                <article class="skater-card">
+                    <h2>Sky Brown</h2>
+                    <p class="role">Olympic-era park skating</p>
+                    <p>
+                        Became one of the youngest Olympic medalists in skateboarding history, representing
+                        the sport's newest generation on its biggest stage.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+     <footer class="site-footer">
+        <p>&copy; <span id="currentyear"></span> &#127804; Eli Avila &#127804; M&eacute;xico</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>

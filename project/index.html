@@ -4,51 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Street Boarder — A Brief History of Skateboarding</title>
-    <meta name="description" content="A brief history of skateboarding, the skaters who shaped it, and the fundamental tricks every street skater learns.">
+    <meta name="description" content="A brief history of skateboarding, its most influential skaters, and the tricks that built street skating.">
     <meta name="author" content="Eli Avila">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/streetboarder.css">
-    <script src="scripts/streetboard.js" defer></script>
+    <script src="scripts/streetboarder.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Street Boarder</h1>
-        <div>Not just a sport, but a lifestyle</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tricks.html">Tricks</a></li>
-                <li><a href="skaters.html">Skateborders</a></li>
-                <li><a href="letter.html">Subscribe!</a></li>
-            </ul>
-    </header>
-    <main>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-        <div class="hero-image">
-            <picture>
-                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
-                <source srcset="images/hero-small.webp" media="(max-width: 1000px)">
-                <img src="images/skate-large.webp" alt="Skate or Die!" width="500" height="250">
-            </picture>
-        </div>
-
-        <section>
-            <h2>History</h2>
-            <p>kateboarding began in California during the late 1940s and early 1950s, when surfers wanted a way to practice their skills on land during days without waves. They attached roller skate wheels to wooden boards, creating what became known as "sidewalk surfing."</p>
-            <img src="https://img.redbull.com/images/c_crop,x_0,y_0,h_2667,w_4000/c_fill,w_950,h_633/q_auto,f_auto/redbullcom/2020/6/12/ifyx6fmpehhidhhrjsxb/banzai-skateboarding-portugal" loading="lazy"="early skateboarding">
-            <p>In the 1960s, skateboarding grew in popularity, and companies started producing commercial skateboards. By the 1970s, the invention of urethane wheels made skateboards smoother, faster, and safer, leading to major improvements in performance and the rise of skate parks.</p>
-            <p></p>
-            <p>During the 1980s and 1990s, street skateboarding became the dominant style, with skaters performing tricks on stairs, rails, and curbs. This era also saw the growth of professional competitions and influential skateboard brands.</p>
-            <img src="images/skate-bowl.avif" alt="skater practicing in bowling alley" loading="lazy">
-            <p>Today, skateboarding is a worldwide sport and lifestyle. It made its Olympic debut at the Tokyo 2020 Games (held in 2021), introducing the sport to an even larger global audience. It continues to inspire creativity, athleticism, and self-expression for millions of people around the world.</p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST4cE3hFDO0Lml2mJKkUCVeRTjgNlWb00JbYqo5CFnUQ&s=10" alt="raysa leal street competition" loading="lazy">
+    <header class="site-header">
+        <p class="eyebrow">Est. 1950 &middot; Concrete &amp; Culture</p>
+        <h1>Street<span class="tilt">Boarder</span></h1>
+        <p class="tagline">Not a sport, but a lifestyle.</p>
+       
         
+        <nav>
+            <ul class="site-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skaters.html">Skaters</a></li>
+                <li><a href="tricks.html">Tricks</a></li>
+                <li><a href="subscribe.html">Subscribe!</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <!-- HISTORY -->
+        <section class="history" aria-labelledby="history-heading">
+            <div class="section-head">
+                <p class="eyebrow">01 &mdash; Origins</p>
+                <h2 id="history-heading">A brief history of skateboarding</h2>
+                <p class="lede">
+                    Skateboarding started as a way to surf when the ocean was flat, and it has been
+                    reinventing itself every decade since. Here's how a wooden crate on roller-skate
+                    wheels turned into an Olympic sport.
+                </p>
+            </div>
+
+            <ol class="timeline">
+                <li class="timeline-item">
+                    <span class="decade">1950s</span>
+                    <h3>Sidewalk surfing</h3>
+                    <p>
+                        California surfers looking for something to do between swells nailed roller-skate
+                        wheels to wooden boards and took to the sidewalks. It had no name yet, and no
+                        rules — just surfing's footwork translated to pavement.
+                    </p>
+                </li>
+                <li class="timeline-item">
+                    <span class="decade">1970s</span>
+                    <h3>Urethane and the Z-Boys</h3>
+                    <p>
+                        Urethane wheels replaced clay and metal, finally giving skaters real grip. In
+                        drought-emptied Los Angeles backyards, the Zephyr team — the Z-Boys — poured their
+                        surf style into empty swimming pools and invented vert skating almost by accident.
+                    </p>
+                </li>
+                <li class="timeline-item">
+                    <span class="decade">1980s</span>
+                    <h3>The vert boom, then the street pivot</h3>
+                    <p>
+                        Skateparks rose and fell with insurance costs, so skaters took the ramp tricks they'd
+                        learned back to the streets. The ollie — a no-hands jump — became the technical seed
+                        from which nearly every modern street trick would grow.
+                    </p>
+                </li>
+                <li class="timeline-item">
+                    <span class="decade">1990s</span>
+                    <h3>Street skating goes technical</h3>
+                    <p>
+                        Curbs, stairs, and handrails became the new terrain. Flip tricks multiplied, video
+                        parts replaced contest wins as the measure of skill, and skate videos built a
+                        DIY media culture of their own.
+                    </p>
+                </li>
+                <li class="timeline-item">
+                    <span class="decade">2000s</span>
+                    <h3>Mainstream and the X Games</h3>
+                    <p>
+                        Televised competitions and video games introduced skateboarding to people who had
+                        never touched a board, turning a subculture into a global industry without fully
+                        sanding down its edges.
+                    </p>
+                </li>
+                <li class="timeline-item">
+                    <span class="decade">2020s</span>
+                    <h3>The Olympic stage</h3>
+                    <p>
+                        Skateboarding debuted at the Tokyo 2020 Olympics, putting street and park skating
+                        in front of the widest audience the sport has ever had — a long way from a plank
+                        with roller-skate wheels.
+                    </p>
+                </li>
+            </ol>
         </section>
-
     </main>
-    
 
-    <footer>
-        <p>&copy; <span id="currentyear"></span> 🛹 Eli Avila 🛹 WDD131 </p>
+    <footer class="site-footer">
+        <p>&copy; <span id="currentyear"></span> &#127804; Eli Avila &#127804; M&eacute;xico</p>
         <p id="lastModified"></p>
     </footer>
 </body>
