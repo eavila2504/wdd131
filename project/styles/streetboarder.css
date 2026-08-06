@@ -90,7 +90,7 @@ a {
     padding: 4rem 1.5rem 3.5rem;
     text-align: center;
     background-image:
-        radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1.4px);
+        radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1.4px);
     background-size: 14px 14px;
 }
 
@@ -127,6 +127,91 @@ a {
     color: var(--concrete-dim);
 }
 
+/* ---------- nav bar ---------- */
+
+.site-header nav {
+    margin-top: 2rem;
+}
+
+.site-nav {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+}
+
+.site-nav a {
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--concrete-dim);
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    color: var(--color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.site-nav a[aria-current="page"] {
+    color: var(--shadow);
+    background-color: var(--color);
+}
+
+.site-nav a.site-nav-cta {
+    color: var(--shadow);
+    background-color: var(--mustard);
+}
+
+.site-nav a.site-nav-cta:hover,
+.site-nav a.site-nav-cta:focus-visible {
+    background-color: var(--concrete-dim);
+    color: var(--shadow);
+}
+
+@media (max-width: 30rem) {
+    .site-nav {
+        gap: 0.5rem;
+    }
+
+    .site-nav a {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* ---------- hero image + caption ---------- */
+
+.hero-wrap {
+    position: relative;
+    margin-bottom: 2.5rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.hero-img {
+    width: 100%;
+    height: 62vh;
+    min-height: 320px;
+    object-fit: cover;
+}
+
+.hero-wrap .lede {
+    background-color: var(--shadow);
+    color: var(--concrete-dim);
+    font-size: 0.98rem;
+    padding: 1rem 1.5rem;
+    
+}
+
 /* ---------- shared section layout ---------- */
 
 main {
@@ -146,7 +231,7 @@ section:last-of-type {
 
 .section-head {
     max-width: 40rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .eyebrow {
@@ -165,11 +250,6 @@ h2 {
     margin-bottom: 0.75rem;
 }
 
-.lede {
-    color: #4a463f;
-    font-size: 1.05rem;
-}
-
 /* ---------- history timeline ---------- */
 
 .timeline {
@@ -180,12 +260,29 @@ h2 {
 }
 
 .timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
     position: relative;
     background-color: var(--color);
     border-left: 6px solid var(--blackred);
     border-radius: var(--radius);
     padding: 1.5rem 1.75rem;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.timeline-img {
+    flex: 0 0 auto;
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--radius);
 }
 
 .decade {
@@ -224,7 +321,7 @@ h2 {
     border-radius: var(--radius);
     padding: 1.75rem;
     border-top: 4px solid var(--mustard);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .skater-card h3 {
@@ -260,7 +357,7 @@ h2 {
     padding: 1.25rem 1.5rem;
     display: grid;
     gap: 0.35rem;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .trick-name {
@@ -321,6 +418,19 @@ h2 {
 
 /* ---------- responsive tweaks ---------- */
 
+@media (max-width: 40rem) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .timeline-img {
+        width: 100%;
+        height: 200px;
+        order: -1;
+    }
+}
+
 @media (max-width: 30rem) {
     .site-header {
         padding: 3rem 1rem 2.5rem;
@@ -328,5 +438,10 @@ h2 {
 
     section {
         padding: 3rem 0;
+    }
+
+    .hero-img {
+        height: 78vh;
+        max-height: 640px;
     }
 }
