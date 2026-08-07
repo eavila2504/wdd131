@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tricks</title>
+    <title>Tricks — Street Boarder</title>
     <meta name="description" content="Most important tricks in the history of skateboarding.">
     <meta name="author" content="Eli Avila">
 
@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/streetboarder.css">
-    <script src="scripts/streetboarder.js" defer></script>
+    <link rel="stylesheet" href="styles/tricks.css">
+    <script src="scripts/tricks.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -21,61 +22,43 @@
         <p class="eyebrow">Est. 1950 &middot; Concrete &amp; Culture</p>
         <h1>Street<span class="tilt">Boarder</span></h1>
         <p class="tagline">Not a sport, but a lifestyle.</p>
-        <nav>
-            <ul class="site-nav">
+
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <nav aria-label="Primary">
+            <ul class="site-nav" id="site-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="skaters.html">Skaters</a></li>
-                <li><a href="tricks.html">Tricks</a></li>
-                <li><a href="subscribe.html">Subscribe!</a></li>
+                <li><a href="tricks.html" aria-current="page">Tricks</a></li>
+                <li><a href="subscribe.html" class="site-nav-cta">Subscribe!</a></li>
             </ul>
         </nav>
     </header>
-        <section class="tricks" aria-labelledby="tricks-heading">
+
+    <main id="main">
+        <section class="tricks" aria-labelledby="page-title">
             <div class="section-head">
                 <p class="eyebrow">03 &mdash; Fundamentals</p>
-                <h2 id="tricks-heading">Tricks every skater learns</h2>
+                <h2 id="page-title">Tricks every skater learns</h2>
                 <p class="lede">Most street tricks are variations built on top of a small set of fundamentals.</p>
             </div>
 
-            <ul class="trick-list">
-                <li class="trick">
-                    <div class="trick-name">
-                        <h3>Ollie</h3>
-                        <span class="difficulty" data-level="1">Beginner</span>
-                    </div>
-                    <p>A no-hands jump made by snapping the tail down and sliding the front foot up the board. The foundation for nearly every other trick.</p>
-                </li>
-                <li class="trick">
-                    <div class="trick-name">
-                        <h3>Kickflip</h3>
-                        <span class="difficulty" data-level="2">Intermediate</span>
-                    </div>
-                    <p>An ollie combined with a flick off the edge of the board that flips it once beneath the rider's feet before it's caught and landed.</p>
-                </li>
-                <li class="trick">
-                    <div class="trick-name">
-                        <h3>50-50 Grind</h3>
-                        <span class="difficulty" data-level="2">Intermediate</span>
-                    </div>
-                    <p>Both trucks lock onto a curb, rail, or ledge and slide across it evenly, one of the first grinds most skaters learn.</p>
-                </li>
-                <li class="trick">
-                    <div class="trick-name">
-                        <h3>Manual</h3>
-                        <span class="difficulty" data-level="1">Beginner</span>
-                    </div>
-                    <p>Balancing on the back two wheels while rolling, essentially a skateboard's version of a wheelie. Often linked between other tricks.</p>
-                </li>
-                <li class="trick">
-                    <div class="trick-name">
-                        <h3>360 Flip</h3>
-                        <span class="difficulty" data-level="3">Advanced</span>
-                    </div>
-                    <p>A kickflip and a 360-degree shove-it combined into a single rotation, considered one of the harder tricks to land consistently.</p>
-                </li>
-            </ul>
+            <nav class="trick-filter" aria-label="Filter tricks by difficulty">
+                <ul class="navigation">
+                    <li><a href="#" data-filter="tricks" class="active">All</a></li>
+                    <li><a href="#" data-filter="beginner">Beginner</a></li>
+                    <li><a href="#" data-filter="intermediate">Intermediate</a></li>
+                    <li><a href="#" data-filter="advanced">Advanced</a></li>
+                </ul>
+            </nav>
+
+            <div class="trick-grid" id="trick-grid"></div>
         </section>
-     <footer class="site-footer">
+    </main>
+
+    <footer class="site-footer">
         <p>&copy; <span id="currentyear"></span> &#127804; Eli Avila &#127804; M&eacute;xico</p>
         <p id="lastModified"></p>
     </footer>
