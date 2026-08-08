@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skaters</title>
+    <title>Skaters — Street Boarder</title>
     <meta name="description" content="Most important skaters in the history of skateboarding.">
     <meta name="author" content="Eli Avila">
 
@@ -21,56 +21,61 @@
         <p class="eyebrow">Est. 1950 &middot; Concrete &amp; Culture</p>
         <h1>Street<span class="tilt">Boarder</span></h1>
         <p class="tagline">Not a sport, but a lifestyle.</p>
-        <div class="logo">
-            <img src="images/logo.svg" alt="Street Boarder logo" width="100" height="100">
-        </div>
-        <nav>
-            <ul class="site-nav">
+
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <nav aria-label="Primary">
+            <ul class="site-nav" id="site-nav">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="skaters.html">Skaters</a></li>
+                <li><a href="skaters.html" aria-current="page">Skaters</a></li>
                 <li><a href="tricks.html">Tricks</a></li>
-                <li><a href="subscribe.html">Subscribe!</a></li>
+                <li><a href="subscribe.html" class="site-nav-cta">Subscribe!</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-
+    <main id="main">
         <section class="skaters" aria-labelledby="skaters-heading">
             <div class="section-head">
                 <p class="eyebrow">02 &mdash; Icons</p>
-                <h1 id="skaters-heading">Skaters who shaped the sport</h1>
+                <h2 id="skaters-heading">Skaters who shaped the sport</h2>
                 <p class="lede">A handful of names come up in nearly every conversation about how skateboarding got here.</p>
             </div>
 
             <div class="card-grid">
                 <article class="skater-card">
-                    <h2>Rodney Mullen</h2>
+                    <h3>Rodney Mullen</h3>
                     <p class="role">The godfather of flat-ground tricks</p>
+                    <img src="images/r-mullen.jpg" loading="lazy" alt="Rodney Mullen performing a trick">
                     <p>
                         Widely credited with inventing the flatground ollie, the kickflip, and dozens of
                         other flip tricks that are now considered the basic vocabulary of street skating.
                     </p>
                 </article>
                 <article class="skater-card">
-                    <h2>Tony Hawk</h2>
+                    <h3>Tony Hawk</h3>
                     <p class="role">Vert skating's most recognizable face</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEE6JiC8dQSrnNyItsRTqCZxQvy9_BoxbqUeRKzqKCwg&s=10" loading="lazy" alt="Tony Hawk performing a trick">
                     <p>
                         Landed the first documented 900 in competition and helped carry skateboarding into
                         mainstream pop culture through contests, media, and a namesake video game series.
                     </p>
                 </article>
                 <article class="skater-card">
-                    <h2>Nyjah Huston</h2>
+                    <h3>Nyjah Huston</h3>
                     <p class="role">Modern street skating's dominant competitor</p>
+                    <img src="images/n-houston.jpg" loading="lazy" alt="Nyjah Huston performing a tailslide on a rail">
                     <p>
                         One of the most decorated street skaters of his generation, known for technical
                         precision on rails and stairs at a level few have matched.
                     </p>
                 </article>
                 <article class="skater-card">
-                    <h2>Sky Brown</h2>
+                    <h3>Sky Brown</h3>
                     <p class="role">Olympic-era park skating</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE_J1sFf9SPWzNsS_m73BAxx1iQtZiGWIi0OX6uIgynKFRUk9o2MNe98Y&s=10" loading="lazy" alt="Sky Brown competing at a park contest">
                     <p>
                         Became one of the youngest Olympic medalists in skateboarding history, representing
                         the sport's newest generation on its biggest stage.
@@ -79,10 +84,10 @@
             </div>
         </section>
     </main>
-     <footer class="site-footer">
+
+    <footer class="site-footer">
         <p>&copy; <span id="currentyear"></span> &#127804; Eli Avila &#127804; M&eacute;xico</p>
         <p id="lastModified"></p>
     </footer>
-    
 </body>
 </html>

@@ -23,15 +23,18 @@
         <h1>Street<span class="tilt">Boarder</span></h1>
         <p class="tagline">Not a sport, but a lifestyle.</p>
        
-          <nav>
-            <ul class="site-nav">
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <nav aria-label="Primary">
+            <ul class="site-nav" id="site-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="skaters.html">Skaters</a></li>
-                <li><a href="tricks.html">Tricks</a></li>
-                <li><a href="subscribe.html">Subscribe!</a></li>
-            </ul>
-        </nav>
+                <li><a href="tricks.html" aria-current="page">Tricks</a></li>
+                <li><a href="subscribe.html" class="site-nav-cta">Subscribe!</a></li>
     </header>
+    
     <main>
         <fieldset>
             <legend>Subscribe to our newsletter</legend>
